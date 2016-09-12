@@ -1,2 +1,2 @@
-# CF-Frontend
-Patrick task for CS
+# Web of Banjo task 
+Patrick task for Banjo task

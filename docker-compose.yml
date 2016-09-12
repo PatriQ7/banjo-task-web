@@ -1,0 +1,17 @@
+web:
+    image: nginx:latest
+    ports:
+        - "80:80"
+    container_name: nginx
+    restart: always
+    volumes:
+        - /opt/dev-cluster/CF-Frontend/code:/code
+        - /opt/dev-cluster/CF-Frontend/site.conf:/etc/nginx/conf.d/default.conf
+    links:
+        - php
+php:
+    image: php:7-fpm
+    container_name: php
+    restart: always
+    volumes:
+        - /opt/dev-cluster/CF-Frontend/code:/code
